@@ -1,6 +1,6 @@
 {
   "name": "electron-update",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
@@ -14,8 +14,7 @@
     "win": {
       "target": [
         "nsis"
-      ],
-      "remoteReleases": "https://github.com/xogns656/electron-update.git"
+      ]
     },
     "publish": {
       "provider": "github",
