@@ -43,6 +43,28 @@ app.on("activate", function() {
   if (BrowserWindow.getAllWindows().length === 0) createWindow();
 });
 
+autoUpdater.on("update-available", () => {
+  console.log("update_available");
+  mainWindow.webContents.send("update_available");
+});
+autoUpdater.on("update-downloaded", () => {
+  console.log("update-downloaded");
+  mainWindow.webContents.send("update_downloaded");
+});
+
+autoUpdater.on("download-progress", function(
+  bytesPerSecond,
+  percent,
+  total,
+  transferred
+) {
+  console.log(`${bytesPerSecond}, ${percent}, ${total}, ${transferred}`);
+  contents.send(
+    "updater-message",
+    `download progress : ${bytesPerSecond}, ${percent}, ${total}, ${transferred}`
+  );
+});
+
 ipcMain.on("app_version", event => {
   event.sender.send("app_version", { version: app.getVersion() });
 });
@@ -52,9 +74,3 @@ ipcMain.on("restart_app", () => {
 });
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-autoUpdater.on("update-available", () => {
-  mainWindow.webContents.send("update_available");
-});
-autoUpdater.on("update-downloaded", () => {
-  mainWindow.webContents.send("update_downloaded");
-});

@@ -14,11 +14,13 @@
     "win": {
       "target": [
         "nsis"
-      ]
+      ],
+      "remoteReleases": "https://github.com/xogns656/electron-update.git"
     },
     "publish": {
       "provider": "github",
-      "token": "8eceee14f8cde7e0835a99462f7d206279570938"
+      "owner": "xogns656",
+      "repo": "electron-update"
     }
   },
   "repository": {
