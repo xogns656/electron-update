@@ -3,6 +3,7 @@ const { app, BrowserWindow, ipcMain } = require("electron");
 const { autoUpdater } = require("electron-updater");
 const path = require("path");
 
+console.log(autoUpdater.checkForUpdatesAndNotify());
 let mainWindow;
 function createWindow() {
   // Create the browser window.
@@ -17,7 +18,9 @@ function createWindow() {
 
   // and load the index.html of the app.
   mainWindow.loadFile("index.html");
-
+  mainWindow.on("closed", function() {
+    mainWindow = null;
+  });
   mainWindow.once("ready-to-show", () => {
     autoUpdater.checkForUpdatesAndNotify();
   });

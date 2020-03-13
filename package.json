@@ -1,6 +1,6 @@
 {
   "name": "electron-update",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
@@ -19,7 +19,8 @@
     "publish": {
       "provider": "github",
       "owner": "xogns656",
-      "repo": "electron-update"
+      "repo": "electron-update",
+      "publishAutoUpdate": true
     }
   },
   "repository": {
