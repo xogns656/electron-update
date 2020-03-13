@@ -11,9 +11,9 @@
   "build": {
     "asar": false,
     "appId": "com.test.update-test",
-    "win": {
+    "linux": {
       "target": [
-        "nsis"
+        "AppImage"
       ]
     },
     "publish": {
@@ -21,6 +21,11 @@
       "owner": "xogns656",
       "repo": "electron-update",
       "publishAutoUpdate": true
+    },
+    "directories": {
+      "buildResources": "resources/installer/",
+      "output": "dist/",
+      "app": "."
     }
   },
   "repository": {
