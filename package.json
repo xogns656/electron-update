@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "pack": "electrion-builder --dir",
-    "deploy": "electron-builder build --win --publish always"
+    "deploy": "electron-builder build --armv7l --publish always"
   },
   "build": {
     "asar": false,
