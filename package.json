@@ -1,12 +1,12 @@
 {
   "name": "electron-update",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "pack": "electrion-builder --dir",
-    "deploy": "electron-builder build --armv7l --publish always"
+    "deploy": "GH_TOKEN=1d1fb7010f27a169c1917be88d4df6ce97ef1f96 electron-builder build --armv7l --publish always"
   },
   "build": {
     "asar": false,
