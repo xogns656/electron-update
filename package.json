@@ -1,6 +1,6 @@
 {
   "name": "electron-update",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
@@ -18,7 +18,7 @@
     },
     "publish": {
       "provider": "github",
-      "token": "cf0f15ceff1c8dc2ffe12dd59217ad4a2fb61f34"
+      "token": "e4cf8ad1ae11790c14de43c805d8f2fcd9ed1145"
     }
   },
   "repository": {
